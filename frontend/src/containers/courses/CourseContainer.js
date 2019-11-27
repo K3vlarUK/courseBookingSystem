@@ -61,13 +61,13 @@ class CourseContainer extends Component {
                     <Switch>
                         <Route exact path="/courses/town/:town" render={(props) => {
                             const town = props.match.params.town;
-                            const courses = this.findCoursesByTown(town);
+                            this.findCoursesByTown(town);
                             return <CourseList courses={this.state.foundCourses} />
                         }} />
                         <Route exact path="/courses/:id" render={(props) => {
                             const id = props.match.params.id;
                             const course = this.findCourseById(id);
-                            return <CourseDetail course={this.state.courses} onDelete={this.handleDelete} />
+                            return <CourseDetail course={course} onDelete={this.handleDelete} />
                         }} />
                         <Route render={() => {
                         return <CourseList courses={this.state.courses} />

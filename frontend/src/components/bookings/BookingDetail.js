@@ -13,7 +13,7 @@ const BookingDetail = (props) => {
 
     return ( 
         <div className="component">
-        <Booking booking={props.booking} />
+            <Booking booking={props.booking} />
             <p>Booked by: {props.booking.customer.name}</p>
             <button onClick={handleDelete}>Delete this booking</button>
         </div>
